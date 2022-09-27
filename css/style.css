@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.corpo {
+    border: solid 2px;
+    width: 300px;
+    height: 350px;
+    margin-left: 40%;
+    margin-top: 5%;
+    padding: 20px;
+    background-color: rgb(214, 210, 210);
+}
+body {
+    background: black
+}
+.visor{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    
+}
+.numero {
+    margin-left: 50px;
+    margin-bottom: 40px;
+    
+}
+.opc {
+    float: left;
+    margin-top: 40px;
+}
+
+.form-check {
+    float: left;
+    margin-left: 25px;
+}
+#hor {
+    float: left;
+}
+#min {
+    float: left;
+}
+#dec {
+    margin-left: 10px;
+}
+.botao {
+    text-align: center;
+}
+/* CSS Responsavel por definir o estilo para radio Checkado */
+input[type="radio"]{
+    -webkit-appearance: none;
+    width: 18px;
+    height: 20px;
+}
+input[type="radio"]:checked{
+    background-color: black;
+}
