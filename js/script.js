@@ -58,19 +58,7 @@ function pause() {
 // Zera os valores
 function cancel() {
     clearInterval(cronometro);
-    hora = 0;
-    minutos = 0;
-    segundos = 0;
-    document.getElementById('visor').innerText = '00:00:00';
-    document.getElementById('start').disabled = false // habilitando botão
-    document.querySelector("#horas").disabled = false;
-    document.querySelector("#minutos").disabled = false;
-    document.querySelector("#segundos").disabled = false;
-    music.pause();
-    document.querySelector("#horas").value = hora.toString().padStart(2, '0');
-    document.querySelector("#minutos").value = minutos.toString().padStart(2, '0');
-    document.querySelector("#segundos").value = segundos.toString().padStart(2, '0');
-
+    window.location.reload(true);
 }
 
 // Faz a mudança dos valores
