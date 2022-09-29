@@ -21,4 +21,4 @@ Extras:
 - [ ] Transformar botão start e pause em um só
 
 ## Video
-Publicação: [**Linkedin**]().
+Publicação: [**Linkedin**](https://www.linkedin.com/posts/nicholas-ribeiro-py_frontend-networking-project-activity-6981040072322113536-ANXN?utm_source=share&utm_medium=member_desktop).
