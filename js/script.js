@@ -5,7 +5,7 @@ var minutos;
 var segundos;
 var tempo = 1000; // Milésimos
 var cronometro;
-var opc;
+var opcao;
 var i;
 var radio;
 var paused
@@ -15,24 +15,24 @@ const music2 = new Audio('audio/beep.mp3');
 
 // Define os números inicias
 function define () {
-    hora = document.querySelector("#horas");
-    minutos = document.querySelector("#minutos");
-    segundos = document.querySelector("#segundos");
-    hora = hora.value;
-    minutos = minutos.value;
-    segundos = segundos.value;
+    const horaDOM = document.querySelector("#horas");
+    const minutosDOM = document.querySelector("#minutos");
+    const segundosDOM = document.querySelector("#segundos");
+    hora = horaDOM.value;
+    minutos = minutosDOM.value;
+    segundos = segundosDOM.value;
 }
 
 // Começa o cronômetro
 function start() {
     stats = true;
-    document.getElementById('start').disabled = true // desabilitando botão
+    desabilita()
     if (paused == undefined ) {
         define();
     }
-    opc = document.getElementsByName('exampleRadios');
-    for (i in opc) 
-        if (opc[0].checked)
+    opcao = document.getElementsByName('exampleRadios');
+    for (i in opcao) 
+        if (opcao[0].checked)
             radio = 'crescente';
         else
             radio = 'decrescente';
@@ -46,9 +46,7 @@ function pause() {
     clearInterval(cronometro);
     if (stats){
         paused = true
-        document.querySelector("#horas").disabled = true;// desabilitando botão
-        document.querySelector("#minutos").disabled = true;
-        document.querySelector("#segundos").disabled = true;
+        desabilita()
     }
     document.getElementById('start').disabled = false; // habilitando botão 	
     music.pause();
@@ -98,6 +96,15 @@ function timer(radio) {
         music2.play();
     }
 }   
+
+// desabilita botões
+function desabilita() {
+    document.getElementById('start').disabled = true;
+    document.querySelector("#horas").disabled = true;
+    document.querySelector("#minutos").disabled = true;
+    document.querySelector("#segundos").disabled = true;
+}
+
 // Adicionando keyboard events
 document.addEventListener("keydown", function(event){
     if(event.key == 'i'){
@@ -110,3 +117,5 @@ document.addEventListener("keydown", function(event){
         cancel()
     }
   });
+
+
