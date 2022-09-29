@@ -10,8 +10,8 @@ var i;
 var radio;
 var paused
 var stats 
-const music = new Audio('som.mp3');
-const music2 = new Audio('beep.mp3');
+const music = new Audio('audio/som.mp3');
+const music2 = new Audio('audio/beep.mp3');
 
 // Define os números inicias
 function define () {
