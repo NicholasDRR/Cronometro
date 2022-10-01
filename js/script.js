@@ -8,8 +8,8 @@ var cronometro;
 var opcao;
 var i;
 var radio;
-var paused
-var stats 
+var paused;
+var stats;
 const music = new Audio('audio/som.mp3');
 const music2 = new Audio('audio/beep.mp3');
 
@@ -45,8 +45,8 @@ function start() {
 function pause() {
     clearInterval(cronometro);
     if (stats){
-        paused = true
-        desabilita()
+        paused = true;
+        desabilita();
     }
     document.getElementById('start').disabled = false; // habilitando botão 	
     music.pause();
@@ -97,7 +97,7 @@ function timer(radio) {
     }
 }   
 
-// desabilita botões
+// Desabilita botões
 function desabilita() {
     document.getElementById('start').disabled = true;
     document.querySelector("#horas").disabled = true;
@@ -117,5 +117,3 @@ document.addEventListener("keydown", function(event){
         cancel()
     }
   });
-
-

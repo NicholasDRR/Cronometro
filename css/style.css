@@ -46,6 +46,7 @@ body {
 .botao {
     text-align: center;
 }
+
 /* CSS Responsavel por definir o estilo para radio Checkado */
 input[type="radio"]{
     -webkit-appearance: none;
